@@ -1,0 +1,11 @@
+lab db "xxxxxxxxxx"
+    db "         x"
+    db "xxxxx xxxx"
+    db "x   x    x"
+    db "x x x xx x"
+    db "x x   x  x"
+    db "x xxxxxxxx"
+    db "x x      x"
+    db "x   x xx  "
+    db "xxxxxxxxxx"
+    
