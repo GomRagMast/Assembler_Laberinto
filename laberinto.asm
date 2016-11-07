@@ -18,14 +18,14 @@ et1:
 et2:
     inc bx    
     inc columna
-    cmp columna, 70   ;19
+    cmp columna, 70   ;20
     je et3
     jmp et4
 et3:  
     mov columna, 10
     inc fila
 et4:
-    cmp fila, 50      ;19
+    cmp fila, 50      ;20
     je finlab
     jmp inicio
 finlab: 
@@ -63,9 +63,12 @@ arriba:
     mov der,0
     dec fila
     call compara 
-    inc fila
+    inc fila 
     cmp al,71
     je derecha
+    mov color,9 
+    call pixel  
+    mov color,91
     dec fila  
     cmp al, 40
     je punte
@@ -77,9 +80,12 @@ derecha:
     mov der,1 
     inc columna
     call compara 
-    dec columna
+    dec columna 
     cmp al,71
-    je abajo
+    je abajo    
+    mov color,9 
+    call pixel  
+    mov color,91
     inc columna
     cmp al, 40
     je punte 
@@ -91,9 +97,12 @@ abajo:
     mov der,0
     inc fila
     call compara 
-    dec fila
+    dec fila  
     cmp al,71
     je izquierda
+    mov color,9 
+    call pixel  
+    mov color,91
     inc fila    
     cmp al, 40
     je punte
@@ -105,9 +114,12 @@ izquierda:
     mov der,0
     dec columna
     call compara 
-    inc columna
+    inc columna 
     cmp al,71
-    je arriba
+    je arriba   
+    mov color,9 
+    call pixel  
+    mov color,91
     dec columna 
     cmp al, 40
     je punte
@@ -175,4 +187,4 @@ aba     db 0
 puntos  db 0
 
 ;Importar Libreria mapa laberinto
-include "_laberinto.map.asm"    
+include "2_laberinto.map.asm"    
