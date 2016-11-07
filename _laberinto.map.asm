@@ -40,7 +40,7 @@ lab db "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     db "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     
     
-;Solucion delimitada por -
+;Solucion
 ;lab db "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ;db ">>>>x   xxxxxx>>>>>>>>>>>>>>>>>>>>>>>>>>>>v  x       x     x"
 ;db "x xvx x x^>>>x^xxxxxxxxxxxxxxxxxxxxxxxxxxxvx xxxxxxx x xxx x"

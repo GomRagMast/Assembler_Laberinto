@@ -64,13 +64,13 @@ arriba:
     dec fila
     call compara 
     inc fila 
-    cmp al,71
+    cmp cp,71     
     je derecha
-    mov color,9 
-    call pixel  
-    mov color,91
+    mov color,9   
+    call pixel    
+    mov color,91  
     dec fila  
-    cmp al, 40
+    cmp cp, 40    
     je punte
     jmp continua
 derecha:
@@ -81,13 +81,13 @@ derecha:
     inc columna
     call compara 
     dec columna 
-    cmp al,71
+    cmp cp,71     
     je abajo    
-    mov color,9 
-    call pixel  
-    mov color,91
+    mov color,9   
+    call pixel    
+    mov color,91  
     inc columna
-    cmp al, 40
+    cmp cp, 40    
     je punte 
     jmp continua
 abajo:
@@ -98,13 +98,13 @@ abajo:
     inc fila
     call compara 
     dec fila  
-    cmp al,71
+    cmp cp,71     
     je izquierda
-    mov color,9 
-    call pixel  
-    mov color,91
+    mov color,9   
+    call pixel    
+    mov color,91  
     inc fila    
-    cmp al, 40
+    cmp cp, 40    
     je punte
     jmp continua          
 izquierda: 
@@ -115,13 +115,13 @@ izquierda:
     dec columna
     call compara 
     inc columna 
-    cmp al,71
-    je arriba   
-    mov color,9 
-    call pixel  
-    mov color,91
+    cmp cp,71     
+    je arriba     
+    mov color,9   
+    call pixel    
+    mov color,91  
     dec columna 
-    cmp al, 40
+    cmp cp, 40    
     je punte
     jmp continua 
 punte:
@@ -134,7 +134,8 @@ compara:
     mov cx, columna
     mov dx, fila
     mov ah, 0dh
-    int 10h
+    int 10h  
+    mov cp,al
 ret
 ;-------------------------------------------------- 
 puntar:
@@ -184,7 +185,8 @@ der     db 1
 izq     db 0
 arr     db 0
 aba     db 0 
-puntos  db 0
+puntos  db 0 
+cp      db 0
 
 ;Importar Libreria mapa laberinto
-include "2_laberinto.map.asm"    
+include "_laberinto.map.asm"    
